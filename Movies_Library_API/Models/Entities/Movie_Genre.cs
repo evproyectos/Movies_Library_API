@@ -7,16 +7,23 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Movies_Library_API.Models.Entities
 {
+    [Table("Movie_Genres")]
     public class Movie_Genre
     {
         
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        [ForeignKey("MovieId")]
+        
         public int MovieId { get; set; }
 
-        [ForeignKey("GenreId")]
+        [ForeignKey("MovieId")]
+        public Movie? Movie { get; set; }
+
+
         public int GenreId { get; set; }
+        [ForeignKey("GenreId")]
+        public Genre? Genre { get; set;}
+
     }
 }

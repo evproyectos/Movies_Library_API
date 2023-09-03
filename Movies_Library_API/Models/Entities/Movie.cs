@@ -3,7 +3,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
 namespace Movies_Library_API.Models.Entities
-{
+{   
+    [Table("Movies")]
     public class Movie
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

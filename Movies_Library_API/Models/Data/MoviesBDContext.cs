@@ -14,7 +14,7 @@ namespace Movies_Library_API.Models.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql(_configuration.GetConnectionString("EFDemo"));
+            optionsBuilder.UseNpgsql(_configuration.GetConnectionString("MoviesBD"));
         }
     }
 }

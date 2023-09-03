@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Movies_Library_API.Models.Entities
 {
+    [Table("Genres")]
     public class Genre
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

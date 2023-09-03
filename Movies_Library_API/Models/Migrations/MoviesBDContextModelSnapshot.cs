@@ -78,7 +78,30 @@ namespace Movies_Library_API.Models.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("GenreId");
+
+                    b.HasIndex("MovieId");
+
                     b.ToTable("Movie_Genres");
+                });
+
+            modelBuilder.Entity("Movies_Library_API.Models.Entities.Movie_Genre", b =>
+                {
+                    b.HasOne("Movies_Library_API.Models.Entities.Genre", "Genre")
+                        .WithMany()
+                        .HasForeignKey("GenreId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Movies_Library_API.Models.Entities.Movie", "Movie")
+                        .WithMany()
+                        .HasForeignKey("MovieId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Genre");
+
+                    b.Navigation("Movie");
                 });
 #pragma warning restore 612, 618
         }
