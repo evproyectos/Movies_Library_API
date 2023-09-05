@@ -19,12 +19,26 @@ namespace Movies_Library_API.Controllers
             _context = context;
         }
         
+
         [HttpGet]
-        [Route("Genres")]
-        public async Task<ActionResult<IEnumerable<Genre>>> GetGenres()
+        [Route("Movies")]
+        public async Task<ActionResult<IEnumerable<Movie>>> GetMovie()
         {
-            var tryit = await _context.Genres.ToListAsync();
-            return new JsonResult(tryit);
+            List<Movie> movies = await _context.Movies.ToListAsync();
+            
+            return movies;
+        }
+
+        [HttpGet]
+        [Route("Movies-genre")]
+        public async Task<ActionResult<IEnumerable<Movie_Genre>>> GetMovieGenre()
+        {
+            List<Movie_Genre> movie_genres = await _context.Movie_Genres
+                .Include(mg => mg.Movie)
+                .Include(mg => mg.Genre)
+                .ToListAsync();
+
+            return movie_genres;
         }
     }
 }
