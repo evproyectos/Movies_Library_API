@@ -33,9 +33,7 @@ namespace Movies_Library_API.Controllers
         public async Task<ActionResult<IEnumerable<Movie_Genre>>> GetMovieGenre()
         {
             List<Movie_Genre> movie_genres = await _context.Movie_Genres
-                .Include(mg => mg.Movie)
-                .Include(mg => mg.Genre)
-                .ToListAsync();
+                .Include(mg => mg.Movie).Include(mg => mg.Genre).ToListAsync();
 
             return movie_genres;
         }

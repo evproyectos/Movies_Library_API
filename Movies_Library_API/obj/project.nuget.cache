@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YpgQam6i//S/T0Ml6QS7flj4upq0uTPAF+KNIZNHk10zUP29MyYLux637++pl2TdQC9Zs6Cit9lsFFvzzuFh+w==",
+  "dgSpecHash": "rXxflpmK2MbLTqSR/KtYBQ7kJrYd5KJBwq/TwtzAqclbVVQKMv8zCX9rJbzmCP5EeuzSjfYHdM1xEi07yW6+UA==",
   "success": true,
-  "projectFilePath": "C:\\Proyectos\\C#\\Movies_Library_API\\Movies_Library_API\\Movies_Library_API.csproj",
+  "projectFilePath": "c:\\Proyectos\\C#\\Movies_Library_API\\Movies_Library_API\\Movies_Library_API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Emanuel\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Emanuel\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.10\\microsoft.aspnetcore.openapi.7.0.10.nupkg.sha512",
