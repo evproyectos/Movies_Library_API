@@ -19,7 +19,6 @@ namespace Movies_Library_API.Controllers
             _context = context;
         }
         
-
         [HttpGet]
         [Route("Movies")]
         public async Task<ActionResult<IEnumerable<Movie>>> GetMovie()
@@ -40,5 +39,32 @@ namespace Movies_Library_API.Controllers
 
             return movie_genres;
         }
+
+        [HttpPost]
+        [Route("Movies_add")]
+        public async Task<IActionResult> CreateMovie([FromBody] Movie movie, [FromQuery] int[] GenreId)
+        {
+            if (movie == null || GenreId == null)
+            {
+                return BadRequest();
+            }
+
+            foreach (var genreID in GenreId)
+            {
+                Movie_Genre movie_Genre = new()
+                {
+                    Movie = movie,
+                    MovieId = movie.Id,
+                    GenreId = genreID
+                };    
+                
+                _context.Movie_Genres?.Add(movie_Genre);       
+            }
+
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction("GetMovie", new { id = movie.Id }, movie);
+        }
+ 
     }
 }

@@ -23,5 +23,21 @@ namespace Movies_Library_API.Controllers
             List<Genre> genres = await _context.Genres.ToListAsync();
             return genres;
         }
+
+        [HttpPost]
+        [Route("genres_add")]
+        [ActionName(nameof(CreateGenre))]
+        public async Task<IActionResult> CreateGenre([FromBody] Genre genre)
+        {
+            if (genre == null)
+            {
+                return BadRequest();
+            }
+
+            _context.Genres?.Add(genre);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction("GetGenres", new { id = genre.Id }, genre);
+        }
     }
 }
