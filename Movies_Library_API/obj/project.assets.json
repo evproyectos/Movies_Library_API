@@ -1454,11 +1454,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Proyectos\\C#\\Movies_Library_API\\Movies_Library_API\\Movies_Library_API.csproj",
+      "projectUniqueName": "d:\\Proyectos\\C#\\Movies_Library_API\\Movies_Library_API\\Movies_Library_API.csproj",
       "projectName": "Movies_Library_API",
-      "projectPath": "C:\\Proyectos\\C#\\Movies_Library_API\\Movies_Library_API\\Movies_Library_API.csproj",
+      "projectPath": "d:\\Proyectos\\C#\\Movies_Library_API\\Movies_Library_API\\Movies_Library_API.csproj",
       "packagesPath": "C:\\Users\\Emanuel\\.nuget\\packages\\",
-      "outputPath": "C:\\Proyectos\\C#\\Movies_Library_API\\Movies_Library_API\\obj\\",
+      "outputPath": "d:\\Proyectos\\C#\\Movies_Library_API\\Movies_Library_API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

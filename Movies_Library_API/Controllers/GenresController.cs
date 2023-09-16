@@ -16,6 +16,7 @@ namespace Movies_Library_API.Controllers
             _context = context;
         }
 
+
         [HttpGet]
         [Route("Genres")]
         public async Task<ActionResult<IEnumerable<Genre>>> GetGenres()

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Proyectos\\C#\\Movies_Library_API\\Movies_Library_API\\Movies_Library_API.csproj": {}
+    "d:\\Proyectos\\C#\\Movies_Library_API\\Movies_Library_API\\Movies_Library_API.csproj": {}
   },
   "projects": {
-    "c:\\Proyectos\\C#\\Movies_Library_API\\Movies_Library_API\\Movies_Library_API.csproj": {
+    "d:\\Proyectos\\C#\\Movies_Library_API\\Movies_Library_API\\Movies_Library_API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Proyectos\\C#\\Movies_Library_API\\Movies_Library_API\\Movies_Library_API.csproj",
+        "projectUniqueName": "d:\\Proyectos\\C#\\Movies_Library_API\\Movies_Library_API\\Movies_Library_API.csproj",
         "projectName": "Movies_Library_API",
-        "projectPath": "c:\\Proyectos\\C#\\Movies_Library_API\\Movies_Library_API\\Movies_Library_API.csproj",
+        "projectPath": "d:\\Proyectos\\C#\\Movies_Library_API\\Movies_Library_API\\Movies_Library_API.csproj",
         "packagesPath": "C:\\Users\\Emanuel\\.nuget\\packages\\",
-        "outputPath": "c:\\Proyectos\\C#\\Movies_Library_API\\Movies_Library_API\\obj\\",
+        "outputPath": "d:\\Proyectos\\C#\\Movies_Library_API\\Movies_Library_API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

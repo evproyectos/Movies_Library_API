@@ -29,7 +29,7 @@ namespace Movies_Library_API.Controllers
         }
 
         [HttpGet]
-        [Route("Movies-genre")]
+        [Route("Movies_genre")]
         public async Task<ActionResult<IEnumerable<Movie_Genre>>> GetMovieGenre()
         {
             List<Movie_Genre> movie_genres = await _context.Movie_Genres
@@ -39,8 +39,8 @@ namespace Movies_Library_API.Controllers
         }
 
         [HttpPost]
-        [Route("Movies_add")]
-        public async Task<IActionResult> CreateMovie([FromBody] Movie movie, [FromQuery] int[] GenreId)
+        [Route("Movies_add_total")]
+        public async Task<IActionResult> CreateMovieWithGenres([FromBody] Movie movie, [FromQuery] int[] GenreId)
         {
             if (movie == null || GenreId == null)
             {
@@ -63,6 +63,36 @@ namespace Movies_Library_API.Controllers
 
             return CreatedAtAction("GetMovie", new { id = movie.Id }, movie);
         }
+
+        [HttpPost]
+        [Route("Movies_add_genres")]
+        public async Task<IActionResult> CreateMovie(int movieId,[FromBody] List<int> genreIDs)
+        {
+            if(genreIDs == null || genreIDs.Count == null)
+                return BadRequest("No genre IDs provided");
+            
+            var movie = _context.Movies.FindAsync(movieId);
+
+            if(movie == null)
+                return NotFound("Movie not found");
+
+            foreach (var genreID in genreIDs)
+            {
+                Movie_Genre movie_Genre = new()
+                {
+                    MovieId = movieId,
+                    GenreId = genreID
+                };
+
+                _context.Movie_Genres.Add(movie_Genre);
+            }
+
+            await _context.SaveChangesAsync();
+
+            return Ok();
+        }
+
+        
  
     }
 }
